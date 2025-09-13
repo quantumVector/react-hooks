@@ -6,10 +6,10 @@ const navigationItems = [
         label: 'useTransition',
         path: '/use-transition',
         submenu: [
-            {label: 'Пример 1 без useTransition', path: '/use-transition/without-example-1'},
-            {label: 'Пример 1 с useTransition', path: '/use-transition/with-example-1'},
-            {label: 'Пример 2 без useTransition', path: '/use-transition/without-example-2'},
-            {label: 'Пример 2 с useTransition', path: '/use-transition/with-example-2'},
+            {label: 'Поиск без useTransition', path: '/use-transition/search-without'},
+            {label: 'Поиск с useTransition', path: '/use-transition/search-with'},
+            {label: 'Вкладки без useTransition', path: '/use-transition/tabs-without'},
+            {label: 'Вкладки с useTransition', path: '/use-transition/tabs-with'},
         ]
     },
     {
@@ -90,21 +90,12 @@ const navigationItems = [
 export const Navigation = () => {
     return (
         <nav className={styles.navigation}>
-            <div className={styles.brand}>
-                <h1>React Hooks Examples</h1>
-            </div>
-
             <div className={styles.menu}>
-                {navigationItems.map((item) => (
-                    <div key={item.path} className={styles.menuItem}>
-                        <NavLink
-                            to={item.path}
-                            className={({isActive}) =>
-                                `${styles.menuLink} ${isActive ? styles.active : ''}`
-                            }
-                        >
+                {navigationItems.map((item, index) => (
+                    <div key={index} className={styles.menuItem}>
+                        <div className={styles.menuHeader}>
                             {item.label}
-                        </NavLink>
+                        </div>
 
                         {item.submenu && (
                             <div className={styles.submenu}>

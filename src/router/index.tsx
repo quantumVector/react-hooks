@@ -27,19 +27,19 @@ export const router = createBrowserRouter([
                         element: <PlaceholderPage title="useTransition" />
                     },
                     {
-                        path: "without-example-1",
+                        path: "search-without",
                         element: <WithoutTransition />
                     },
                     {
-                        path: "with-example-1",
+                        path: "search-with",
                         element: <WithTransition />
                     },
                     {
-                        path: "without-example-2",
+                        path: "tabs-without",
                         element: <WithoutTransitionTabs />
                     },
                     {
-                        path: "with-example-2",
+                        path: "tabs-with",
                         element: <WithTransitionTabs />
                     }
                 ]
@@ -48,10 +48,6 @@ export const router = createBrowserRouter([
             {
                 path: "suspense",
                 children: [
-                    {
-                        index: true,
-                        element: <PlaceholderPage title="Suspense" />
-                    },
                     {
                         path: "basic",
                         element: <PlaceholderPage title="Suspense - Базовый пример" />
@@ -71,10 +67,6 @@ export const router = createBrowserRouter([
                 path: "batching",
                 children: [
                     {
-                        index: true,
-                        element: <PlaceholderPage title="Батчинг" />
-                    },
-                    {
                         path: "automatic",
                         element: <PlaceholderPage title="Автоматический батчинг" />
                     },
@@ -92,10 +84,6 @@ export const router = createBrowserRouter([
             {
                 path: "use-deferred-value",
                 children: [
-                    {
-                        index: true,
-                        element: <PlaceholderPage title="useDeferredValue" />
-                    },
                     {
                         path: "basic",
                         element: <PlaceholderPage title="useDeferredValue - Базовый пример" />
@@ -115,10 +103,6 @@ export const router = createBrowserRouter([
                 path: "use-sync-external-store",
                 children: [
                     {
-                        index: true,
-                        element: <PlaceholderPage title="useSyncExternalStore" />
-                    },
-                    {
                         path: "basic",
                         element: <PlaceholderPage title="useSyncExternalStore - Базовый пример" />
                     },
@@ -136,10 +120,6 @@ export const router = createBrowserRouter([
             {
                 path: "use-imperative-handle",
                 children: [
-                    {
-                        index: true,
-                        element: <PlaceholderPage title="useImperativeHandle" />
-                    },
                     {
                         path: "basic",
                         element: <PlaceholderPage title="useImperativeHandle - Базовый пример" />
@@ -159,10 +139,6 @@ export const router = createBrowserRouter([
                 path: "use-optimistic",
                 children: [
                     {
-                        index: true,
-                        element: <PlaceholderPage title="useOptimistic" />
-                    },
-                    {
                         path: "basic",
                         element: <PlaceholderPage title="useOptimistic - Базовый пример" />
                     },
@@ -181,10 +157,6 @@ export const router = createBrowserRouter([
                 path: "use-reducer",
                 children: [
                     {
-                        index: true,
-                        element: <PlaceholderPage title="useReducer" />
-                    },
-                    {
                         path: "basic-counter",
                         element: <PlaceholderPage title="useReducer - Базовый счетчик" />
                     },
@@ -202,10 +174,6 @@ export const router = createBrowserRouter([
             {
                 path: "react-19-improvements",
                 children: [
-                    {
-                        index: true,
-                        element: <PlaceholderPage title="Улучшения в React 19" />
-                    },
                     {
                         path: "compiler",
                         element: <PlaceholderPage title="React Compiler" />
