@@ -1,0 +1,53 @@
+import React, { useState } from "react";
+import styles from "./styles.module.css";
+
+const ITEMS_COUNT = 50000;
+
+const simulateHeavyWork = (milliseconds: number) => {
+    const start = performance.now();
+    while (performance.now() - start < milliseconds) {
+        // busy loop
+    }
+};
+
+const generateItems = (value: string) => {
+    simulateHeavyWork(25);
+
+    return Array.from({ length: ITEMS_COUNT }, (_, index) => `${index + 1}. ${value}`);
+};
+
+export const WithoutTransition = () => {
+    const [inputValue, setInputValue] = useState("");
+    const [items, setItems] = useState<string[]>([]);
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const nextValue = e.target.value;
+        setInputValue(nextValue);
+
+        const nextItems = generateItems(nextValue);
+        setItems(nextItems);
+    };
+
+    return (
+        <div className={styles.wrapper}>
+            <h2>Без useTransition</h2>
+            <p>Ввод может «подлагивать», пока готовится и рендерится список.</p>
+
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleChange}
+                placeholder="Введите текст"
+                style={{ padding: 8, fontSize: 16, width: 320 }}
+            />
+
+            <ul style={{ marginTop: 12, maxHeight: 300, overflow: "auto", padding: 0 }}>
+                {items.map((text, index) => (
+                    <li key={index} style={{ listStyle: "none", padding: "4px 0", borderBottom: "1px solid #eee" }}>
+                        {text}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
