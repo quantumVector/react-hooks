@@ -1,0 +1,118 @@
+.navigation {
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    width: 320px;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    padding: 24px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f8fafc;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.menu {
+    padding: 0;
+}
+
+.menuItem {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.menuLink {
+    display: block;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.menuLink:hover {
+    background-color: #f8fafc;
+    color: #3b82f6;
+}
+
+.menuLink.active {
+    background-color: #eff6ff;
+    color: #3b82f6;
+    border-left-color: #3b82f6;
+}
+
+.submenu {
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
+.submenuLink {
+    display: block;
+    padding: 12px 20px 12px 40px;
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    position: relative;
+}
+
+.submenuLink:hover {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.submenuLink.active {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    border-left-color: #3b82f6;
+}
+
+.submenuLink::before {
+    content: '•';
+    position: absolute;
+    left: 28px;
+    color: #d1d5db;
+}
+
+.submenuLink.active::before {
+    color: #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navigation {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .brand h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .menuItem:hover .submenu,
+    .menuItem:focus-within .submenu {
+        display: block;
+    }
+}

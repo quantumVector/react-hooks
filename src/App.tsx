@@ -1,14 +1,9 @@
-import {WithoutTransition, WithoutTransitionTabs, WithTransition} from "./components/use-transition";
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+import './App.css';
 
 function App() {
-    return (
-        <>
-            {/*<WithoutTransition/>*/}
-            {/*<WithTransition/>*/}
-            {/*<WithoutTransitionTabs />*/}
-            <WithTransitionTabs />
-        </>
-    )
+    return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
