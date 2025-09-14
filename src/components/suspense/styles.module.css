@@ -37,3 +37,26 @@
     color: #6b7280;
     font-style: italic;
 }
+
+.error {
+    padding: 16px;
+    background-color: #fee;
+    border: 1px solid #f00;
+    border-radius: 4px
+}
+
+.success {
+    padding: 16px;
+    background-color: #efe;
+    border: 1px solid #0a0;
+    border-radius: 4px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.label input {
+    margin-right: 8px;
+}

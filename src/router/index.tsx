@@ -9,6 +9,7 @@ import {
 } from "../components/use-transition";
 import {lazy} from "react";
 import {SuspenseToggle, SuspenseWrapper} from "../components/suspense";
+import {SuspenseError} from "../components/suspense/suspense-with-error.tsx";
 
 const LazyPage = lazy(() => import('../pages/lazy-page'));
 
@@ -52,19 +53,11 @@ export const router = createBrowserRouter([
                                 <LazyPage />
                             </SuspenseWrapper>
                         )
+                    },
+                    {
+                        path: "error-boundary",
+                        element: <SuspenseError />
                     }
-                    // {
-                    //     path: "lazy-page",
-                    //     element: <PlaceholderPage title="Suspense - Базовый пример" />
-                    // },
-                    // {
-                    //     path: "lazy-loading",
-                    //     element: <PlaceholderPage title="Suspense - Ленивая загрузка" />
-                    // },
-                    // {
-                    //     path: "error-boundary",
-                    //     element: <PlaceholderPage title="Suspense - Обработка ошибок" />
-                    // }
                 ]
             },
             // {
