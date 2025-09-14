@@ -45,11 +45,11 @@ ul {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: red;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
+    background: green;
     border-radius: 4px;
 }
 
