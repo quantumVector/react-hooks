@@ -7,15 +7,10 @@ import {
     WithTransition,
     WithTransitionTabs
 } from "../components/use-transition";
-import {lazy, type ReactNode, Suspense} from "react";
+import {lazy} from "react";
+import {SuspenseToggle, SuspenseWrapper} from "../components/suspense";
 
 const LazyPage = lazy(() => import('../pages/lazy-page'));
-
-const SuspenseWrapper = ({ children }: { children: ReactNode }) => (
-    <Suspense fallback={<div style={{ padding: 20 }}>Загружаю страницу...</div>}>
-        {children}
-    </Suspense>
-);
 
 export const router = createBrowserRouter([
     {
@@ -48,7 +43,7 @@ export const router = createBrowserRouter([
                 children: [
                     {
                         path: "basic",
-                        element: <SuspenseBasic />
+                        element: <SuspenseToggle />
                     },
                     {
                         path: "lazy-loading",
