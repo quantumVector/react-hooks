@@ -10,6 +10,7 @@ import {
 import {lazy} from "react";
 import {SuspenseToggle, SuspenseWrapper} from "../components/suspense";
 import {SuspenseError} from "../components/suspense/suspense-with-error.tsx";
+import {AutomaticBatching, BatchingAfter18, BatchingBefore18} from "../components/batching";
 
 const LazyPage = lazy(() => import('../pages/lazy-page'));
 
@@ -60,23 +61,23 @@ export const router = createBrowserRouter([
                     }
                 ]
             },
-            // {
-            //     path: "batching",
-            //     children: [
-            //         {
-            //             path: "automatic",
-            //             element: <PlaceholderPage title="Автоматический батчинг" />
-            //         },
-            //         {
-            //             path: "before-18",
-            //             element: <PlaceholderPage title="Батчинг до React 18" />
-            //         },
-            //         {
-            //             path: "after-18",
-            //             element: <PlaceholderPage title="Батчинг после React 18" />
-            //         }
-            //     ]
-            // },
+            {
+                path: "batching",
+                children: [
+                    {
+                        path: "automatic",
+                        element: <AutomaticBatching />
+                    },
+                    {
+                        path: "before-18",
+                        element: <BatchingBefore18 />
+                    },
+                    {
+                        path: "after-18",
+                        element: <BatchingAfter18 />
+                    }
+                ]
+            },
             // {
             //     path: "use-deferred-value",
             //     children: [
