@@ -1,33 +1,20 @@
-.wrapper {
-    display: grid;
-    gap: 16px;
-}
-
-.card {
-    padding: 16px;
-    border: 1px solid #e6e6e6;
-    border-radius: 12px;
-    background: #fff;
-}
-
-.row {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
 .button {
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    background: #f7f7f7;
+    padding: 12px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 16px;
 }
 
-.counter {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    padding: 2px 6px;
-    border-radius: 6px;
-    background: #f0f0ff;
+.button:hover {
+    background-color: #2563eb;
+}
+
+.button:active {
+    background-color: #1d4ed8;
 }

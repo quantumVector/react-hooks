@@ -25,9 +25,7 @@ const navigationItems = [
         label: 'Батчинг',
         path: '/batching',
         submenu: [
-            {label: 'Автоматический батчинг', path: '/batching/automatic'},
-            {label: 'До React 18', path: '/batching/before-18'},
-            {label: 'После React 18', path: '/batching/after-18'},
+            {label: 'Батчинг', path: '/batching/batching'},
         ]
     },
     {
