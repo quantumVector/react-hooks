@@ -16,7 +16,7 @@ const navigationItems = [
         label: 'Suspense',
         path: '/suspense',
         submenu: [
-            {label: 'Базовый пример', path: '/suspense/basic'},
+            {label: 'Базовый пример', path: '/suspense/toggle'},
             {label: 'С ленивой загрузкой', path: '/suspense/lazy-loading'},
             {label: 'С ошибками', path: '/suspense/error-boundary'},
         ]
@@ -32,9 +32,7 @@ const navigationItems = [
         label: 'useDeferredValue',
         path: '/use-deferred-value',
         submenu: [
-            {label: 'Базовый пример', path: '/use-deferred-value/basic'},
             {label: 'С поиском', path: '/use-deferred-value/search'},
-            {label: 'Сравнение с useTransition', path: '/use-deferred-value/comparison'},
         ]
     },
     {
@@ -60,8 +58,6 @@ const navigationItems = [
         path: '/use-optimistic',
         submenu: [
             {label: 'Базовый пример', path: '/use-optimistic/basic'},
-            {label: 'С формой', path: '/use-optimistic/form'},
-            {label: 'С API запросами', path: '/use-optimistic/api'},
         ]
     },
     {

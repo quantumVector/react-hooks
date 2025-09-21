@@ -11,6 +11,8 @@ import {lazy} from "react";
 import {SuspenseToggle, SuspenseWrapper} from "../components/suspense";
 import {SuspenseError} from "../components/suspense/suspense-with-error.tsx";
 import {Batching} from "../components/batching";
+import {WithDeferredValue} from "../components/use-deferred-value";
+import {WithOptimistic} from "../components/use-optimistic";
 
 const LazyPage = lazy(() => import('../pages/lazy-page'));
 
@@ -44,7 +46,7 @@ export const router = createBrowserRouter([
                 path: "suspense",
                 children: [
                     {
-                        path: "basic",
+                        path: "toggle",
                         element: <SuspenseToggle />
                     },
                     {
@@ -70,23 +72,15 @@ export const router = createBrowserRouter([
                     },
                 ]
             },
-            // {
-            //     path: "use-deferred-value",
-            //     children: [
-            //         {
-            //             path: "basic",
-            //             element: <PlaceholderPage title="useDeferredValue - Базовый пример" />
-            //         },
-            //         {
-            //             path: "search",
-            //             element: <PlaceholderPage title="useDeferredValue - С поиском" />
-            //         },
-            //         {
-            //             path: "comparison",
-            //             element: <PlaceholderPage title="useDeferredValue - Сравнение с useTransition" />
-            //         }
-            //     ]
-            // },
+            {
+                path: "use-deferred-value",
+                children: [
+                    {
+                        path: "search",
+                        element: <WithDeferredValue />
+                    },
+                ]
+            },
             // {
             //     path: "use-sync-external-store",
             //     children: [
@@ -121,23 +115,15 @@ export const router = createBrowserRouter([
             //         }
             //     ]
             // },
-            // {
-            //     path: "use-optimistic",
-            //     children: [
-            //         {
-            //             path: "basic",
-            //             element: <PlaceholderPage title="useOptimistic - Базовый пример" />
-            //         },
-            //         {
-            //             path: "form",
-            //             element: <PlaceholderPage title="useOptimistic - С формой" />
-            //         },
-            //         {
-            //             path: "api",
-            //             element: <PlaceholderPage title="useOptimistic - С API запросами" />
-            //         }
-            //     ]
-            // },
+            {
+                path: "use-optimistic",
+                children: [
+                    {
+                        path: "basic",
+                        element: <WithOptimistic />
+                    },
+                ]
+            },
             // {
             //     path: "use-reducer",
             //     children: [

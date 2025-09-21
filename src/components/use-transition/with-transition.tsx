@@ -42,7 +42,7 @@ export const WithTransition = () => {
                     value={inputValue}
                     onChange={handleChange}
                     placeholder="Введите текст"
-                    style={{ padding: 8, fontSize: 16, width: 320 }}
+                    className={styles.input}
                 />
                 {isPending && <span aria-live="polite">Обновляю список…</span>}
             </div>

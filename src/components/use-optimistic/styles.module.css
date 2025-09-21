@@ -1,0 +1,28 @@
+.input {
+    padding: 8px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    font-size: 16px;
+    width: 320px;
+}
+
+.button {
+    padding: 12px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 16px;
+}
+
+.button:hover {
+    background-color: #2563eb;
+}
+
+.button:active {
+    background-color: #1d4ed8;
+}
