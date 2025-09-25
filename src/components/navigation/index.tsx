@@ -63,16 +63,16 @@ const navigationItems = [
             {label: 'Карусель', path: '/use-reducer/basic'},
         ]
     },
-    {
-        label: 'Улучшения в React 19',
-        path: '/react-19-improvements',
-        submenu: [
-            {label: 'React Compiler', path: '/react-19-improvements/compiler'},
-            {label: 'Actions', path: '/react-19-improvements/actions'},
-            {label: 'use() hook', path: '/react-19-improvements/use-hook'},
-            {label: 'Новые возможности', path: '/react-19-improvements/new-features'},
-        ]
-    }
+    // {
+    //     label: 'Улучшения в React 19',
+    //     path: '/react-19-improvements',
+    //     submenu: [
+    //         {label: 'React Compiler', path: '/react-19-improvements/compiler'},
+    //         {label: 'Actions', path: '/react-19-improvements/actions'},
+    //         {label: 'use() hook', path: '/react-19-improvements/use-hook'},
+    //         {label: 'Новые возможности', path: '/react-19-improvements/new-features'},
+    //     ]
+    // }
 ];
 
 export const Navigation = () => {
