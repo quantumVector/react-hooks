@@ -39,18 +39,14 @@ const navigationItems = [
         label: 'useSyncExternalStore',
         path: '/use-sync-external-store',
         submenu: [
-            {label: 'Базовый пример', path: '/use-sync-external-store/basic'},
             {label: 'С localStorage', path: '/use-sync-external-store/local-storage'},
-            {label: 'С window размером', path: '/use-sync-external-store/window-size'},
         ]
     },
     {
         label: 'useImperativeHandle',
         path: '/use-imperative-handle',
         submenu: [
-            {label: 'Базовый пример', path: '/use-imperative-handle/basic'},
-            {label: 'С forwardRef', path: '/use-imperative-handle/forward-ref'},
-            {label: 'Кастомные методы', path: '/use-imperative-handle/custom-methods'},
+            {label: 'Модалка', path: '/use-imperative-handle/modal'},
         ]
     },
     {
@@ -64,9 +60,7 @@ const navigationItems = [
         label: 'useReducer',
         path: '/use-reducer',
         submenu: [
-            {label: 'Базовый счетчик', path: '/use-reducer/basic-counter'},
-            {label: 'Сложное состояние', path: '/use-reducer/complex-state'},
-            {label: 'С useContext', path: '/use-reducer/with-context'},
+            {label: 'Карусель', path: '/use-reducer/basic'},
         ]
     },
     {

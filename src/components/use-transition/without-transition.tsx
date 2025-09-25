@@ -17,7 +17,7 @@ const generateItems = (value: string) => {
 };
 
 export const WithoutTransition = () => {
-    const [inputValue, setInputValue] = useState("");
+    const [inputValue, setInputValue] = useState('');
     const [items, setItems] = useState<string[]>([]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,20 +30,16 @@ export const WithoutTransition = () => {
 
     return (
         <div className={styles.wrapper}>
-            <h2>Без useTransition</h2>
-            <p>Ввод может «подлагивать», пока готовится и рендерится список.</p>
-
             <input
                 type="text"
                 value={inputValue}
                 onChange={handleChange}
                 placeholder="Введите текст"
-                style={{ padding: 8, fontSize: 16, width: 320 }}
             />
 
-            <ul style={{ marginTop: 12, maxHeight: 300, overflow: "auto", padding: 0 }}>
+            <ul className={styles.list}>
                 {items.map((text, index) => (
-                    <li key={index} style={{ listStyle: "none", padding: "4px 0", borderBottom: "1px solid #eee" }}>
+                    <li key={index}>
                         {text}
                     </li>
                 ))}

@@ -3,8 +3,46 @@
     font-family: "system-ui, sans-serif";
 }
 
+.inputWrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .input {
     padding: 8px;
     font-size: 16px;
     width: 320px;
+}
+
+.list {
+    margin-top: 12px;
+    max-height: 300px;
+    overflow: auto;
+    padding: 0;
+}
+
+.list li {
+    list-style: none;
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px; margin-bottom: 12px;
+    align-items: center;
+}
+
+.tabs button {
+    padding: 12px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 16px;
 }

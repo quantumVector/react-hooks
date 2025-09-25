@@ -13,6 +13,9 @@ import {SuspenseError} from "../components/suspense/suspense-with-error.tsx";
 import {Batching} from "../components/batching";
 import {WithDeferredValue} from "../components/use-deferred-value";
 import {WithOptimistic} from "../components/use-optimistic";
+import {WithUseSynExternalStore} from "../components/use-sync-external-store";
+import {WithUseImperativeHandle} from "../components/use-imperative-handle";
+import {WithUseReducer} from "../components/ude-reducer";
 
 const LazyPage = lazy(() => import('../pages/lazy-page'));
 
@@ -81,40 +84,24 @@ export const router = createBrowserRouter([
                     },
                 ]
             },
-            // {
-            //     path: "use-sync-external-store",
-            //     children: [
-            //         {
-            //             path: "basic",
-            //             element: <PlaceholderPage title="useSyncExternalStore - Базовый пример" />
-            //         },
-            //         {
-            //             path: "local-storage",
-            //             element: <PlaceholderPage title="useSyncExternalStore - С localStorage" />
-            //         },
-            //         {
-            //             path: "window-size",
-            //             element: <PlaceholderPage title="useSyncExternalStore - Размер окна" />
-            //         }
-            //     ]
-            // },
-            // {
-            //     path: "use-imperative-handle",
-            //     children: [
-            //         {
-            //             path: "basic",
-            //             element: <PlaceholderPage title="useImperativeHandle - Базовый пример" />
-            //         },
-            //         {
-            //             path: "forward-ref",
-            //             element: <PlaceholderPage title="useImperativeHandle - С forwardRef" />
-            //         },
-            //         {
-            //             path: "custom-methods",
-            //             element: <PlaceholderPage title="useImperativeHandle - Кастомные методы" />
-            //         }
-            //     ]
-            // },
+            {
+                path: "use-sync-external-store",
+                children: [
+                    {
+                        path: "local-storage",
+                        element: <WithUseSynExternalStore />
+                    },
+                ]
+            },
+            {
+                path: "use-imperative-handle",
+                children: [
+                    {
+                        path: "modal",
+                        element: <WithUseImperativeHandle />
+                    },
+                ]
+            },
             {
                 path: "use-optimistic",
                 children: [
@@ -124,23 +111,15 @@ export const router = createBrowserRouter([
                     },
                 ]
             },
-            // {
-            //     path: "use-reducer",
-            //     children: [
-            //         {
-            //             path: "basic-counter",
-            //             element: <PlaceholderPage title="useReducer - Базовый счетчик" />
-            //         },
-            //         {
-            //             path: "complex-state",
-            //             element: <PlaceholderPage title="useReducer - Сложное состояние" />
-            //         },
-            //         {
-            //             path: "with-context",
-            //             element: <PlaceholderPage title="useReducer - С useContext" />
-            //         }
-            //     ]
-            // },
+            {
+                path: "use-reducer",
+                children: [
+                    {
+                        path: "basic",
+                        element: <WithUseReducer />
+                    },
+                ]
+            },
             // {
             //     path: "react-19-improvements",
             //     children: [

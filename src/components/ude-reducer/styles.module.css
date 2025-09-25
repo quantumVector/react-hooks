@@ -1,0 +1,48 @@
+.container {
+    display: grid;
+    gap: 8px;
+    max-width: 280px;
+}
+
+.slideCard {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-height: 48px;
+}
+
+.controlsRow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.stateRow {
+    font-size: 14px;
+    color: #444;
+}
+
+.controlsRow button:focus-visible {
+    outline: 2px solid #2684ff;
+    outline-offset: 2px;
+}
+
+.controlsRow button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+.controlsRow button {
+    padding: 12px 20px;
+    margin-right: 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 16px;
+}

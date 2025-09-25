@@ -6,7 +6,7 @@ const ITEMS_COUNT = 100000;
 const simulateHeavyWork = (milliseconds: number) => {
     const start = performance.now();
     while (performance.now() - start < milliseconds) {
-        // busy loop
+        // loop
     }
 };
 
@@ -22,9 +22,9 @@ export const WithTransition = () => {
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const nextValue = event.target.value;
+
         setInputValue(nextValue);
 
-        // некритичное обновление: тяжёлая генерация помечена как transition
         startTransition(() => {
             const nextItems = generateItems(nextValue);
             setItems(nextItems);
@@ -35,8 +35,7 @@ export const WithTransition = () => {
         <div className={styles.wrapper}>
             <h2>С useTransition</h2>
             <p>Ввод остаётся отзывчивым; список обновляется в фоне.</p>
-
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <div className={styles.inputWrap}>
                 <input
                     type="text"
                     value={inputValue}
@@ -48,16 +47,9 @@ export const WithTransition = () => {
             </div>
 
             {!isPending && (
-                <ul
-                    style={{
-                        marginTop: 12,
-                        maxHeight: 300,
-                        overflow: "auto",
-                        padding: 0,
-                    }}
-                >
+                <ul className={styles.list}>
                     {items.map((text, index) => (
-                        <li key={index} style={{ listStyle: "none", padding: "4px 0", borderBottom: "1px solid #eee" }}>
+                        <li key={index}>
                             {text}
                         </li>
                     ))}
